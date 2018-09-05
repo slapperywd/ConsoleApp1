@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="CollorCreator.cs" />
+    <Compile Include="Enums\Color.cs" />
+    <Compile Include="Enums\ExtendedColor.cs" />
     <Compile Include="ExtendedCalculator.cs" />
     <Compile Include="ICalculator.cs" />
     <Compile Include="InstanceContainer.cs" />

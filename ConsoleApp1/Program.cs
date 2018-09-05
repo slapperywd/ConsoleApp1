@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    using ConsoleApp1.Enums;
+
     class Program
     {
         static void Main(string[] args)
@@ -27,15 +29,19 @@ namespace ConsoleApp1
             Console.WriteLine(calculator);
 
             object lol = new ExtendedCalculator();
-            ICalculator ec = (ICalculator) lol;
+            ICalculator ec = (ICalculator)lol;
 
             Console.WriteLine(ec);
 
-            Calculator calculator1 = new Calculator {A = 50};
+            Calculator calculator1 = new Calculator { A = 50 };
             Console.WriteLine(calculator1.A);
             ChangeA(calculator1);
             Console.WriteLine(calculator1.A);
 
+            ExtendedColor exColor = CollorCreator.GetColorEnum(ExtendedColor.Indigo);
+            Color color = CollorCreator.GetColorEnum(Color.Blue);
+            Console.WriteLine(color);
+            Console.WriteLine(exColor);
             Console.ReadKey();
         }
 
